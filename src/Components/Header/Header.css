@@ -1,5 +1,25 @@
 .Header{
     height: 8vh;
     width: 100vw;
-    border: 1px solid #000;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.H_d1{
+    display: grid;
+    align-items: center;
+    padding-left: 10px;
+}
+.H_d1 p{
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+.H_d1 p span{
+    color: #ED7C0B;
+}
+.H_d2{
+    display: grid;
+    justify-content: end;
+    align-items: center;
+    padding-right: 10px;
 }
