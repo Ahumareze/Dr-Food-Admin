@@ -4,7 +4,7 @@ import './Food.css';
 function Food() {
     return (
         <div className='Food_Item'>
-            
+            <div className='Food_Image'></div>
         </div>
     );
 }
