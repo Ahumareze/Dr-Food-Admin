@@ -4,7 +4,28 @@
     background-color: #fff;
 }
 .Intro{
-    height: 200px;
+    padding-top: 7vh;
     width: 100vw;
-    border: 1px solid #000;
+    padding-left: 10px;
+}
+.Intro_name{
+    font-size: 40px;
+    font-weight: bold;
+    color: #000;
+    margin: 0;
+}
+.Intro_tag_line{
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0;
+    color: #ED7C0B;
+}
+.Intro_extraTagLine{
+    font-size: 20px;
+    font-weight: 500;
+    color: #000;
+    opacity: 0.8;
+    margin: 0;
+    margin-top: 15px;
+    margin-bottom: 20px;
 }
