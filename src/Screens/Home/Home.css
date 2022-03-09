@@ -29,3 +29,11 @@
     margin-top: 15px;
     margin-bottom: 20px;
 }
+.Home_foodContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 7vh;
+}

@@ -1,7 +1,9 @@
 import React from 'react';
 import './Home.css';
 
-import {Header} from '../../Components'
+import {Header, Food} from '../../Components';
+import {width} from '../../config/dimensions';
+
 import Intro from './Components/Intro';
 
 function Home() {
@@ -9,6 +11,9 @@ function Home() {
         <div className='Home'>
             <Header />
             <Intro />
+            <div className='Home_foodContainer' style={{width: width - 20}} >
+                <Food />
+            </div>
         </div>
     );
 }
