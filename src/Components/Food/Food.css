@@ -1,5 +1,5 @@
 .Food_Item{
-    height: 265px;
+    padding-bottom: 15px;
     width: 100%;
     background: #FFFFFF;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
@@ -13,4 +13,29 @@
     background-color: #f9f9f9;
     border-radius: 15px;
     margin-top: 5%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.Food_nameTag{
+    width: 90%;
+    margin: 0;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.Food_priceTag{
+    margin: 0;
+    padding-left: 5%;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ED7C0B;
+    margin-top: 3px;
+}
+.Food_buttonContainer{
+    display: grid;
+    justify-content: center;
+    padding-top: 25px;
 }
