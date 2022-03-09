@@ -1,0 +1,30 @@
+.InputItem{
+    width: 100%;
+    margin-left: 15px;
+    margin-top: 20px;
+}
+.InputItem p{
+    margin: 0;
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+.InputItem input{
+    height: 40px;
+    width: 100%;
+    border: 1px solid rgb(175, 175, 175);
+    border-radius: 7px;
+    box-sizing: border-box;
+    padding-left: 10px;
+    font-size: 18px;
+}
+.InputItem textarea{
+    height: 100px;
+    width: 100%;
+    border: 1px solid rgb(175, 175, 175);
+    border-radius: 7px;
+    box-sizing: border-box;
+    padding-left: 10px;
+    font-size: 18px;
+    padding-top: 10px;
+    font-family: sans-serif;
+}
