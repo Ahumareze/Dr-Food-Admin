@@ -1,12 +1,23 @@
 import React from 'react';
 import './App.css';
 
-import {Foods} from './Screens';
+//Imported packages
+import {Redirect, Route, Switch} from 'react-router-dom';
+
+//Imported Packages
+import {Home, Foods, Selected, Cart, Checkout} from './Screens';
 
 function App(props:any) {
   return (
     <div className="App">
-      <Foods />
+      <Switch>
+        <Route path='/' component={Home} />
+        <Route path='/foods' component={Foods} />
+        <Route path='/selected_food' component={Selected} />
+        <Route path='/cart' component={Cart} />
+        <Route path='/checkout' component={Checkout} />
+        <Redirect to='/' />
+      </Switch>
     </div>
   );
 }
