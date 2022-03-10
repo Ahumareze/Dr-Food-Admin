@@ -11,7 +11,7 @@ function App(props:any) {
   return (
     <div className="App">
       <Switch>
-        <Route path='/' component={Home} />
+        <Route path='/' component={Home} exact />
         <Route path='/foods' component={Foods} />
         <Route path='/selected_food' component={Selected} />
         <Route path='/cart' component={Cart} />

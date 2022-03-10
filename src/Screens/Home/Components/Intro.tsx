@@ -1,8 +1,12 @@
-import React from 'react';
+import React, {FC} from 'react';
 
-import {Button} from '../../../Components'
+import {Button} from '../../../Components';
 
-function Intro() {
+interface IntroProps {
+    onClick: () => void
+}
+
+const Intro:FC<IntroProps> = ({onClick}):JSX.Element => {
     return (
         <div className='Intro'>
             <p className='Intro_name'>Dr Food</p>
@@ -10,7 +14,7 @@ function Intro() {
             <p className='Intro_extraTagLine'>Tasty looking treats in Owerri, <br />
                 now with door to door delivery
             </p>
-            <Button onClick={() => console.log('')} name='Order now' height={45} width={140} />
+            <Button onClick={() => onClick()} name='Order now' height={45} width={140} />
         </div>
     );
 }

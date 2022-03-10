@@ -6,17 +6,18 @@ import { Button } from '..';
 interface FoodProps{
     img: any,
     name: string,
-    price: number
+    price: number,
+    onClick: () => void
 }
 
-const Food:FC<FoodProps> = ({img, name, price}):JSX.Element => {
+const Food:FC<FoodProps> = ({img, name, price, onClick}):JSX.Element => {
     let newName = name
     if(name.length > 14){
         newName = name.substring(0, 14) + '...'
     }
     return (
         <div className='Food_Item'>
-            <div className='Food_Image' style={{backgroundImage: `url(${img})`}} ></div>
+            <div className='Food_Image' style={{backgroundImage: `url(${img})`}} onClick={() => onClick()} ></div>
             <p className='Food_nameTag'>{newName}</p>
             <p className='Food_priceTag'>N{price}</p>
             <div className='Food_buttonContainer'>
