@@ -20,7 +20,7 @@ const Food:FC<FoodProps> = ({img, name, price}):JSX.Element => {
             <p className='Food_nameTag'>{newName}</p>
             <p className='Food_priceTag'>N{price}</p>
             <div className='Food_buttonContainer'>
-                <Button name='Buy' height={35} width={100} />
+                <Button onClick={() => console.log('HELLO')} name='Buy' height={35} width={100} />
             </div>
         </div>
     );

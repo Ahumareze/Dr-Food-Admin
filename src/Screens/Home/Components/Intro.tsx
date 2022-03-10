@@ -10,7 +10,7 @@ function Intro() {
             <p className='Intro_extraTagLine'>Tasty looking treats in Owerri, <br />
                 now with door to door delivery
             </p>
-            <Button name='Order now' height={45} width={140} />
+            <Button onClick={() => console.log('')} name='Order now' height={45} width={140} />
         </div>
     );
 }

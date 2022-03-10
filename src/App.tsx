@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
 
-import {Selected} from './Screens';
+import {Foods} from './Screens';
 
 function App(props:any) {
   return (
     <div className="App">
-      <Selected />
+      <Foods />
     </div>
   );
 }
