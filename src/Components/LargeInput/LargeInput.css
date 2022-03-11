@@ -1,0 +1,25 @@
+.LargeInputItem{
+    width: 100%;
+    margin-top: 13px;
+}
+.LargeInputItem p{
+    margin: 0;
+    padding: 0;
+    padding-bottom: 7px;
+    color: #000;
+    font-size: 19px;
+}
+.LargeInputItem textarea{
+    height: 80px;
+    width: 100%;
+    border: none;
+    border-radius: 7px;
+    background-color: #f0f0f0;
+    box-sizing: border-box;
+    padding-left: 10px;
+    font-size: 19px;
+    font-family: sans-serif;
+}
+.InputItem textarea:focus{
+    outline: 1px solid #ED7C0B;
+}

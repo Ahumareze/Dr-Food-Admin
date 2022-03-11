@@ -1,5 +1,104 @@
 .HomePage{
     height: 100vh;
     width: 100vw;
-    background-color: red;
+    background-color: #fff;
+}
+.HomePageTitle{
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.HomePage section{
+    height: 92vh;
+    width: 100vw;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+.HomePageItem{
+    height: 110px;
+    padding: 15px 0;
+    width: 100%;
+    border-bottom: 1px solid rgb(129, 129, 129);
+    display: grid;
+    grid-template-columns: 110px 1fr;
+}
+.HomePageItemImage{
+    height: 110px;
+    width: 100px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.HomePageItemMain{
+    height: 100px;
+    width: 100%;
+}
+.HomePageItemP{
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+    margin-top: 10px;
+    color: #000;
+}
+.HomePageItemPrice{
+    color: #ED7C0B;
+}
+.HomePageItemBottom{
+    height: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding-top: 10px;
+}
+.HomePIButton{
+    height: 35px;
+    width: 100px;
+    border: 1px solid #ED7C0B;
+    border-radius: 7px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    color: #ED7C0B;
+    font-size: 18px;
+}
+.HomePIButton2{
+    height: 35px;
+    width: 100px;
+    border-radius: 7px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 18px;
+    background-color: #ff0000;
+    margin-left: 15px;
+}
+
+.SelectedItem{
+    height: 92vh;
+    width: 100vw;
+    background-color: #fff;
+    position: absolute;
+    top: 8vh;
+}
+.SelectedItemMain{
+    height: 70vh;
+    margin-right: auto;
+    margin-left: auto;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+    margin-top: 30px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.SelectedImgContainer{
+    height: 200px;
+    width: 100%;
+    border-radius: 15px;
+    background-color: #f0f0f0;
 }
