@@ -4,13 +4,13 @@
     background-color: #fff;
 }
 .Form{
-    height: 300px;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
     margin-right: auto;
     margin-left: auto;
     margin-top: 10vh;
     padding: 15px;
+    padding-bottom: 20px;
     box-sizing: border-box;
 }
 .Form_title{
@@ -20,4 +20,10 @@
     color: #ED7C0B;
     margin: 0;
     padding-bottom: 10px;
+}
+.Form_btn_container{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    padding-top: 25px;
 }
