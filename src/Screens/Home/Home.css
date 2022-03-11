@@ -127,3 +127,12 @@
     display: grid;
     justify-content: center;
 }
+.NewButton{
+    height: 60px;
+    width: 60px;
+    border-radius: 30px;
+    background: linear-gradient(180deg, #FFAF5F 0%, #F0851A 100%);
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}

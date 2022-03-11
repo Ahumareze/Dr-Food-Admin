@@ -7,6 +7,7 @@ import Item from './Components/Item';
 import Selected from './Components/Selected';
 
 import img from '../../Assets/img3.jpg';
+import NewButton from './Components/NewButton';
 
 function Home() {
     const [selected, setSelected] = useState<any>();
@@ -27,6 +28,7 @@ function Home() {
                         onDelete={(e) => console.log(e)}
                     />
                 </section>
+                <NewButton />
             </div>
             {selected && <Selected data={selected} close={() => setSelected(null)} />}
         </>
