@@ -14,8 +14,8 @@ function Form() {
     return (
         <div className='Form' style={{width: width - 30}} >
             <p className='Form_title'>Sign In</p>
-            <Input title='Username' type='text' onChange={(e) => setUsername(e)} />
-            <Input title='Password' type='password' onChange={(e) => setPassword(e)}/>
+            <Input title='Username' placeholder='' type='text' onChange={(e) => setUsername(e)} />
+            <Input title='Password' placeholder='' type='password' onChange={(e) => setPassword(e)}/>
             <div className='Form_btn_container'>
                 <Button name='Continue' height={40} width={200} onClick={() => submit()} />
             </div>

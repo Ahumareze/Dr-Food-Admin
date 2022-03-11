@@ -86,14 +86,14 @@
     top: 8vh;
 }
 .SelectedItemMain{
-    height: 70vh;
     margin-right: auto;
     margin-left: auto;
     background: #FFFFFF;
     box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.15);
     border-radius: 15px;
-    margin-top: 30px;
+    margin-top: 10px;
     padding: 10px;
+    padding-bottom: 20px;
     box-sizing: border-box;
 }
 .SelectedImgContainer{
@@ -101,4 +101,29 @@
     width: 100%;
     border-radius: 15px;
     background-color: #f0f0f0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.SelectedBottom{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 20px;
+}
+.SelectedBottom .SelectedCancle{
+    height: 40px;
+    width: 140px;
+    border: 1px solid #ED7C0B;
+    border-radius: 7px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    color: #ED7C0B;
+    font-size: 18px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.SB_UC{
+    display: grid;
+    justify-content: center;
 }

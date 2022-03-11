@@ -9,7 +9,7 @@ import Selected from './Components/Selected';
 import img from '../../Assets/img3.jpg';
 
 function Home() {
-    const [selected, setSelected] = useState();
+    const [selected, setSelected] = useState<any>();
 
     return (
         <>
@@ -28,7 +28,7 @@ function Home() {
                     />
                 </section>
             </div>
-            {selected && <Selected />}
+            {selected && <Selected data={selected} close={() => setSelected(null)} />}
         </>
     );
 }
