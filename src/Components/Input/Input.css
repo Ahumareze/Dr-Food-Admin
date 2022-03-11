@@ -1,0 +1,21 @@
+.InputItem{
+    width: 100%;
+    margin-top: 10px;
+}
+.InputItem p{
+    margin: 0;
+    padding: 0;
+    padding-bottom: 7px;
+    color: #000;
+    font-size: 19px;
+}
+.InputItem input{
+    height: 40px;
+    width: 100%;
+    border: none;
+    border-radius: 7px;
+    background-color: #f0f0f0;
+    box-sizing: border-box;
+    padding-left: 10px;
+    font-size: 19px;
+}
