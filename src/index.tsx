@@ -6,11 +6,29 @@ import reportWebVitals from './reportWebVitals';
 
 //Imported packages
 import {BrowserRouter} from 'react-router-dom';
+import { createStore, applyMiddleware, compose } from 'redux';
+import { Provider, } from 'react-redux';
+import thunk from 'redux-thunk';
+import { composeWithDevTools } from 'redux-devtools-extension';
+
+//Imported components
+import reducer from './Redux/reducers/reducer';
+
+const store = createStore(
+  reducer,
+  composeWithDevTools(applyMiddleware(thunk))
+);
+
+const app = (
+  <Provider store={store}>
+    <App />
+  </Provider>
+)
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+      {app}
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
