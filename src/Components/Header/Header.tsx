@@ -9,9 +9,9 @@ function Header(props: any) {
             <div className='H_d1'>
                 <p>Dr <span>Food</span></p>
             </div>
-            <div className='H_d2'>
+            {/* <div className='H_d2'>
                 <FiShoppingCart size={25} color='#ED7C0B' onClick={() => props.props.history.push('/cart')} />
-            </div>
+            </div> */}
         </div>
     );
 }

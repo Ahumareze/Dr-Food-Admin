@@ -5,17 +5,14 @@ import './App.css';
 import {Redirect, Route, Switch} from 'react-router-dom';
 
 //Imported Packages
-import {Home, Foods, Selected, Cart, Checkout} from './Screens';
+import {Home, Auth} from './Screens';
 
 function App(props:any) {
   return (
     <div className="App">
       <Switch>
         <Route path='/' component={Home} exact />
-        <Route path='/foods' component={Foods} />
-        <Route path='/selected_food' component={Selected} />
-        <Route path='/cart' component={Cart} />
-        <Route path='/checkout' component={Checkout} />
+        <Route path='/auth' component={Auth} />
         <Redirect to='/' />
       </Switch>
     </div>

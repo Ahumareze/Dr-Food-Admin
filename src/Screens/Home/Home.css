@@ -1,39 +1,5 @@
-.Home{
+.HomePage{
     height: 100vh;
     width: 100vw;
-    background-color: #fff;
-}
-.Intro{
-    padding-top: 7vh;
-    width: 100vw;
-    padding-left: 10px;
-}
-.Intro_name{
-    font-size: 40px;
-    font-weight: bold;
-    color: #000;
-    margin: 0;
-}
-.Intro_tag_line{
-    font-size: 30px;
-    font-weight: bold;
-    margin: 0;
-    color: #ED7C0B;
-}
-.Intro_extraTagLine{
-    font-size: 20px;
-    font-weight: 500;
-    color: #000;
-    opacity: 0.8;
-    margin: 0;
-    margin-top: 15px;
-    margin-bottom: 20px;
-}
-.Home_foodContainer{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 10px;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 7vh;
+    background-color: red;
 }
