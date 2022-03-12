@@ -6,6 +6,7 @@ import { Button, Header, Input, LargeInput, Loader } from '../../Components';
 import { width } from '../../config/dimensions';
 
 import axios from 'axios';
+import { dbUrl } from '../../config/urls';
 
 function NewFood(props: any) {
     const [imgSrc, setImgSrc] = useState<any>();
@@ -41,16 +42,17 @@ function NewFood(props: any) {
     };
 
     const postData = () => {
-        setPosting(true);
         if(name && price && img){
+            setPosting(true);
             const data = {
                 name,
                 price: JSON.parse(price),
                 img,
-                description,
-                quantity: 1
+                description
             }
-            console.log(data);
+            axios.post(dbUrl + 'add_foods', data)
+                .then(r => console.log(r.data))
+                .catch(e => console.log(e))
         }
     }
 
