@@ -1,36 +1,86 @@
-import React, { useState } from 'react';
-import { FiPlus } from 'react-icons/fi';
-import { Button, Header, Input, LargeInput } from '../../Components';
-import { width } from '../../config/dimensions';
+import React, { useState, useEffect } from 'react';
 import './NewFood.css';
 
-import img1 from '../../Assets/img4.jpg';
+import { FiPlus } from 'react-icons/fi';
+import { Button, Header, Input, LargeInput, Loader } from '../../Components';
+import { width } from '../../config/dimensions';
 
-function NewFood() {
-    const [imgSrc, setImgSrc] = useState(img1);
+import axios from 'axios';
 
-    return (
-        <div className='NewFoodPage'>
-            <Header />
-            <div className='SelectedItem'>
+function NewFood(props: any) {
+    const [imgSrc, setImgSrc] = useState<any>();
+    const [loading, setLoading] = useState<boolean>(false);
+    const [posting, setPosting] = useState<boolean>(false)
+
+    const [img, setImg] = useState();
+    const [name, setName] = useState();
+    const [price, setPrice] = useState<any>();
+    const [description, setDescription] = useState();
+
+    useEffect(() => {
+        if(imgSrc){
+            uploadImg(imgSrc[0])
+        }
+    }, [imgSrc])
+    
+    const uploadImg = (img: any) => {
+        setLoading(true)
+        const formData = new FormData()
+        formData.append('file', img);
+        formData.append('upload_preset', 'kqiuojxc');
+
+        axios.post('https://api.cloudinary.com/v1_1/ahumareze/image/upload', formData)
+            .then(r => {
+                setImg(r.data.url);
+                setLoading(false)
+            })
+            .catch(e => {
+                setLoading(false);
+                setImgSrc(null);
+            })
+    };
+
+    const postData = () => {
+        setPosting(true);
+        if(name && price && img){
+            const data = {
+                name,
+                price: JSON.parse(price),
+                img,
+                description,
+                quantity: 1
+            }
+            console.log(data);
+        }
+    }
+
+    const view = (
+        <div className='SelectedItem'>
             <div className='SelectedItemMain' style={{width: width - 20}}>
-                <div className='SelectedImgContainer' style={{backgroundImage: `url(${imgSrc})`}} >
+                <div className='SelectedImgContainer' style={{backgroundImage: `url(${img})`}} >
                     <label htmlFor="file-input">
-                        <FiPlus size={40} />
-                        <input id="file-input" type="file" onChange={(e) => setImgSrc(e.target.value)} />
+                        {!loading ? <FiPlus size={40} style={img ? {opacity: 0} : {}} /> : <Loader /> }
+                        <input id="file-input" type="file" onChange={(e) => setImgSrc(e.target.files)} />
                     </label>
                 </div>
-                <Input title='Name' placeholder='' onChange={(e) => console.log(e)} type='text'/>
-                <Input title='Price' placeholder='' onChange={(e) => console.log(e)} type='text'/>
-                <LargeInput placeholder='' title='Description' onChange={(e) => console.log(e)}  />
+                <Input title='Name' placeholder='' onChange={(e) => setName(e)} type='text'/>
+                <Input title='Price' placeholder='' onChange={(e) => setPrice(e)} type='number'/>
+                <LargeInput placeholder='' title='Description' onChange={(e) => setDescription(e)}  />
                 <div className='SelectedBottom'>
-                    <div className='SelectedCancle' onClick={() => console.log('')}>Cancle</div>
+                    <div className='SelectedCancle' onClick={() => props.history.push('/') }>Cancle</div>
                     <div className='SB_UC'>
-                        <Button name='Update' height={40} width={140} onClick={() => console.log('')} />
+                        <Button name='Update' height={40} width={140} onClick={() => postData()} />
                     </div>
                 </div>
             </div>
         </div>
+    )
+
+
+    return (
+        <div className='NewFoodPage'>
+            <Header />
+            {!posting ? view : <Loader />}
         </div>
     );
 }

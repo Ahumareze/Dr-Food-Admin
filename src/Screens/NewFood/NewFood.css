@@ -10,6 +10,7 @@
     color: rgb(141, 141, 141);
 }
 .SelectedImgContainer input{
-    opacity: 0.1;
-    /* display: none; */
+    opacity: 0;
+    position: absolute;
+    bottom: 0;
 }
