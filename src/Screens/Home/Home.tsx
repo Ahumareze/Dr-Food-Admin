@@ -9,7 +9,7 @@ import Selected from './Components/Selected';
 import img from '../../Assets/img3.jpg';
 import NewButton from './Components/NewButton';
 
-function Home() {
+function Home(props: any) {
     const [selected, setSelected] = useState<any>();
 
     return (
@@ -28,7 +28,7 @@ function Home() {
                         onDelete={(e) => console.log(e)}
                     />
                 </section>
-                <NewButton />
+                <NewButton onClick={() => props.history.push('/new')} />
             </div>
             {selected && <Selected data={selected} close={() => setSelected(null)} />}
         </>

@@ -1,0 +1,15 @@
+.NewFoodPage{
+    height: 100vh;
+    width: 100vw;
+    background-color: #fff;
+}
+.SelectedImgContainer{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    color: rgb(141, 141, 141);
+}
+.SelectedImgContainer input{
+    opacity: 0.1;
+    /* display: none; */
+}

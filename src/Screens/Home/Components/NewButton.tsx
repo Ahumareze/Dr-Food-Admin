@@ -1,9 +1,14 @@
-import React from 'react';
+import React, {FC} from 'react';
+import { FiPlus } from 'react-icons/fi';
 
-function NewButton() {
+interface NewButtonProps{
+    onClick: () => void
+}
+
+const NewButton:FC<NewButtonProps> = ({onClick}):JSX.Element => {
     return (
-        <div className='NewButton'>
-            
+        <div className='NewButton' onClick={() => onClick()} >
+            <FiPlus color='#fff' size={25} />
         </div>
     );
 }
