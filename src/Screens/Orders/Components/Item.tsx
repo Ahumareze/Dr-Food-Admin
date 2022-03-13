@@ -1,20 +1,44 @@
-import React from 'react';
+import React, {FC, useEffect, useState} from 'react';
 
 import { width } from '../../../config/dimensions';
 
-function Item() {
+interface ItemProps{
+    name: string,
+    phone: string,
+    date: string,
+    address: string,
+    cart: any
+}
+
+const Item:FC<ItemProps> = ({name, phone, date, address, cart}):JSX.Element => {
+    const [total, setTotal] = useState<number>()
+    
+    useEffect(() => {
+        calcTotal();
+    }, []);
+
+    const calcTotal = () => {
+        const arr: any[] = [];
+        {cart.map((i: any) => {
+            arr.push(i.price)
+        })}
+        const total = arr?.reduce((a, b) => a + b, 0);
+        setTotal(total)
+    }
+
     return (
         <div className='OrderItem' style={{width: width - 20}}>
-            <p className='OR_title' >Ifeanyi Ahumareze, 12 march 2021</p>
-            <p className='OR_details'>0802318898</p>
-            <p className='OR_details'>12 bishops court, owerri</p>
+            <p className='OR_title' >{name}, {date}</p>
+            <p className='OR_details'>{phone}</p>
+            <p className='OR_details'>{address}</p>
             <div className='OR_main'>
-                <p className='OR_Item' >Potato fries x2 @N3000</p>
-                <p className='OR_Item' >Potato fries x2 @N3000</p>
+                {cart.map((i: any) => (
+                    <p className='OR_Item' >{i.name} x{i.quantity} @N{i.price}</p>
+                ))}
             </div>
             <div className='OR_Bottom'>
                 <div className='OR_d1'>
-                    <p>Total: <span>N2000</span></p>
+                    <p>Total: <span>N{total?.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</span></p>
                 </div>
                 <div className='OR_d2'>
                     <p>status: <span>pending</span></p>
