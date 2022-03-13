@@ -35,9 +35,21 @@
     margin-bottom: 5px;
 }
 .OR_main{
-    height: 100px;
     width: 100%;
     border-radius: 15px;
     border: 1px solid #F69230;
     margin-top: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.OR_Item{
+    font-size: 18px;
+    color: #000;
+    margin: 0;
+    padding: 5px 0;
+}
+.OR_Bottom{
+    height: 50px;
+    width: 100%;
+    border: 1px solid #000;
 }
