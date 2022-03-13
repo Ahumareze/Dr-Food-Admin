@@ -10,6 +10,8 @@ function Orders(props: any) {
             <Header props={props}/>
             <section>
                 <Item />
+                <Item />
+                <Item />
             </section>
         </div>
     );

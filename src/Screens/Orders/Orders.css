@@ -4,10 +4,11 @@
     background-color: #fff;
 }
 .OrderPage section{
-    height: 92vh;
+    height: 90vh;
     width: 100vw;
     overflow: hidden;
     overflow-y: scroll;
+    padding-bottom: 2vh;
 }
 .OrderItem{
     margin-right: auto;
@@ -16,7 +17,7 @@
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
     margin-top: 15px;
-    padding: 10px;
+    padding: 14px 10px;
     box-sizing: border-box;
 }
 .OR_title{
@@ -49,7 +50,24 @@
     padding: 5px 0;
 }
 .OR_Bottom{
-    height: 50px;
     width: 100%;
-    border: 1px solid #000;
+    padding-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.OR_d1 p{
+    font-size: 19px;
+    font-weight: bold;
+    margin: 0;
+}
+.OR_d2{
+    display: grid;
+    justify-content: flex-end;
+}
+.OR_d2 p{
+    font-size: 18px;
+    margin: 0;
+}
+.OR_Bottom span{
+    color: #F69230;
 }

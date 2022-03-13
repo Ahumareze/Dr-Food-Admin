@@ -12,7 +12,14 @@ function Item() {
                 <p className='OR_Item' >Potato fries x2 @N3000</p>
                 <p className='OR_Item' >Potato fries x2 @N3000</p>
             </div>
-            <div className='OR_Bottom'></div>
+            <div className='OR_Bottom'>
+                <div className='OR_d1'>
+                    <p>Total: <span>N2000</span></p>
+                </div>
+                <div className='OR_d2'>
+                    <p>status: <span>pending</span></p>
+                </div>
+            </div>
         </div>
     );
 }
