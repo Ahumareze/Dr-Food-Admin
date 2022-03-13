@@ -4,10 +4,10 @@ import './Auth.css';
 import { Header } from '../../Components';
 import Form from './Components/Form';
 
-function Auth() {
+function Auth(props: any) {
     return (
         <div className='AuthPage'>
-            <Header />
+            <Header props={props} />
             <Form />
         </div>
     );

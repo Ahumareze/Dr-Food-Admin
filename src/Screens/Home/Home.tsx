@@ -50,7 +50,7 @@ function Home(props: any) {
     return (
         <>
             <div className='HomePage'>
-                <Header />
+                <Header props={props} />
                 <section>
                     <p className='HomePageTitle'>All</p>
                     {view}

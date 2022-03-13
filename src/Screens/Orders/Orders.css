@@ -1,0 +1,22 @@
+.OrderPage{
+    height: 100vh;
+    width: 100vw;
+    background-color: #fff;
+}
+.OrderPage section{
+    height: 92vh;
+    width: 100vw;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+.OrderItem{
+    height: 200px;
+    margin-right: auto;
+    margin-left: auto;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    margin-top: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+}

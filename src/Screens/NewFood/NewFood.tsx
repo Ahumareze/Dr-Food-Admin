@@ -81,7 +81,7 @@ function NewFood(props: any) {
 
     return (
         <div className='NewFoodPage'>
-            <Header />
+            <Header props={props} />
             {!posting ? view : <Loader />}
         </div>
     );

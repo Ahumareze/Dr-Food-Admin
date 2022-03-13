@@ -5,7 +5,7 @@ import './App.css';
 import {Redirect, Route, Switch} from 'react-router-dom';
 
 //Imported Packages
-import {Home, Auth, NewFood} from './Screens';
+import {Home, Auth, NewFood, Orders} from './Screens';
 
 function App(props:any) {
   return (
@@ -13,6 +13,7 @@ function App(props:any) {
       <Switch>
         <Route path='/' component={Home} exact />
         <Route path='/auth' component={Auth} />
+        <Route path='/orders' component={Orders} />
         <Route path='/new' component={NewFood} />
         <Redirect to='/' />
       </Switch>

@@ -10,7 +10,7 @@ function Header(props: any) {
                 <p>Dr <span>Food</span></p>
             </div>
             <div className='H_d2'>
-                <FiBell size={25} color='#ED7C0B' onClick={() => props.props.history.push('/cart')} />
+                <FiBell size={25} color='#ED7C0B' onClick={() => props.props.history.push('/orders')} />
             </div>
         </div>
     );
