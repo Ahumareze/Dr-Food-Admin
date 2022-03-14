@@ -7,10 +7,12 @@ interface ItemProps{
     phone: string,
     date: string,
     address: string,
-    cart: any
+    status: boolean,
+    cart: any,
+    changeStatus: () => void
 }
 
-const Item:FC<ItemProps> = ({name, phone, date, address, cart}):JSX.Element => {
+const Item:FC<ItemProps> = ({name, phone, date, address, cart, status, changeStatus}):JSX.Element => {
     const [total, setTotal] = useState<number>()
     
     useEffect(() => {
@@ -40,8 +42,8 @@ const Item:FC<ItemProps> = ({name, phone, date, address, cart}):JSX.Element => {
                 <div className='OR_d1'>
                     <p>Total: <span>N{total?.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</span></p>
                 </div>
-                <div className='OR_d2'>
-                    <p>status: <span>pending</span></p>
+                <div className='OR_d2' onClick={() => {!status ? changeStatus() : alert('order already delivered') } } >
+                    <p>status: <span>{status ? 'delivered' : 'pending' }</span></p>
                 </div>
             </div>
         </div>

@@ -71,3 +71,66 @@
 .OR_Bottom span{
     color: #F69230;
 }
+.AlertContainer{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    z-index: 100;
+}
+.AlertMain{
+    width: 350px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-top: 200px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 20px 0;
+    box-sizing: border-box;
+}
+.PCD{
+    text-align: center;
+    font-size: 20px;
+    margin: 0;
+    padding-bottom: 20px;
+}
+.AlertButtons{
+    height: 45px;
+    width: 90%;
+    margin-left: 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.confirmButton{
+    height: 45px;
+    width: 120px;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 7px;
+    background-color: #ED7C0B;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+.cancleButton{
+    background-color: #f3f3f3;
+    color: rgb(58, 58, 58);
+    height: 45px;
+    width: 120px;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 7px;
+    border: none;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}

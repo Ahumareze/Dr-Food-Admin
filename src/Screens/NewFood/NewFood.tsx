@@ -51,7 +51,9 @@ function NewFood(props: any) {
                 description
             }
             axios.post(dbUrl + 'add_foods', data)
-                .then(r => console.log(r.data))
+                .then(r => {
+                    props.history.push('/')
+                })
                 .catch(e => console.log(e))
         }
     }

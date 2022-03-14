@@ -7,7 +7,7 @@ interface ItemProps{
     id: string,
     description: string,
     onEdit: (e: any) => void,
-    onDelete: (e: string) => void 
+    onDelete: () => void 
 }
 
 const Item:FC<ItemProps> = ({name, price, img, id, description, onEdit, onDelete}) => {
@@ -31,7 +31,7 @@ const Item:FC<ItemProps> = ({name, price, img, id, description, onEdit, onDelete
                 <p className='HomePageItemP HomePageItemPrice'>N{price}</p>
                 <div className='HomePageItemBottom'>
                     <div className='HomePIButton' onClick={() => onSelect()}>Edit</div>
-                    <div className='HomePIButton2' onClick={() => onDelete(id)}>Delete</div>
+                    <div className='HomePIButton2' onClick={() => onDelete()}>Delete</div>
                 </div>
             </div>
         </div>
