@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
+import { connect } from 'react-redux';
 
 import { Button, Input } from '../../../Components';
 import { width } from '../../../config/dimensions';
+import * as actions from '../../../Redux/actions/actions';
 
-function Form() {
+function Form(props: any) {
     const [username, setUsername] = useState();
     const [password, setPassword] = useState();
 
     const submit = () => {
-        console.log(username, password)
+        props.auth(username, password)
     }
 
     return (
@@ -23,4 +25,10 @@ function Form() {
     );
 }
 
-export default Form;
+const mapDispatchToProps = (dispatch: any) => {
+    return{
+        auth: (username: string, password: string) => dispatch(actions.AUTH(username, password))
+    }
+}
+
+export default connect(null, mapDispatchToProps)(Form);
