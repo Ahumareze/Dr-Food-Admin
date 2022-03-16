@@ -1,20 +1,12 @@
 import * as actionTypes from './actionTypes';
 
 const init = () => {
-    return (dispatch: any) => {
-        const arr = localStorage.getItem('@dr_foodCart');
-        console.log(arr)
-    }
+    const token = localStorage.getItem('@drFoodToken')
+    setToken('hello')
 };
 
-const signUp = () => {
-    console.log('dispatchhe')
-    return (dispatch: any) => {
-        console.log('dispatchhe')
-    }
-}
-
 const setToken = (e: string) => {
+    console.log('hello')
     return{
         type: actionTypes.SETTOKEN,
         value: e
@@ -23,6 +15,5 @@ const setToken = (e: string) => {
 
 export {
     init,
-    setToken,
-    signUp
+    setToken
 }

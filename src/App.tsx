@@ -12,7 +12,7 @@ import * as actions from './Redux/actions/actions';
 function App(props:any) {
 
   useEffect(() => {
-    props.signup()
+    props.init()
   }, [])
 
   let view = (
@@ -48,8 +48,7 @@ const mapStateToProps = (state: any) => {
 
 const mapDispatchToProps = (dispatch: any) => {
   return{
-    init: () => dispatch(actions.init),
-    signup: () => dispatch(actions.signUp)
+    init: () => dispatch(actions.init)
   }
 }
 
